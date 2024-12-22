@@ -6,12 +6,50 @@
 
     <groupId>com.indigo.framework</groupId>
     <artifactId>indigo-framework</artifactId>
-    <version>1.0.0</version>
+    <version>${revision}</version>
+    <packaging>pom</packaging>
+    <modules>
+        <module>indigo-core</module>
+        <module>indigo-cache</module>
+    </modules>
 
     <properties>
+        <revision>1.0.0</revision>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <springboot.version>3.3.5</springboot.version>
+        <springcloud.version>2023.0.4</springcloud.version>
+        <springCloudAlibaba.version>2023.0.1.2</springCloudAlibaba.version>
     </properties>
 
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${springboot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${springcloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>${springCloudAlibaba.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 </project>
