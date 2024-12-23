@@ -81,7 +81,7 @@
                     </execution>
                 </executions>
             </plugin>
-<!--             Source -->
+            <!--             Source -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
@@ -120,47 +120,47 @@
                 </configuration>
             </plugin>
 
-<!--            <plugin>-->
-<!--                <groupId>com.github.github</groupId>-->
-<!--                <artifactId>site-maven-plugin</artifactId>-->
-<!--                <version>0.12</version>-->
-<!--                <configuration>-->
-<!--                    <message>Maven artifacts for ${project.artifactId}-${project.version}</message>-->
-<!--                    <noJekyll>true</noJekyll>-->
-<!--                    &lt;!&ndash; 指定从哪里去取打好的包，并上传至github &ndash;&gt;-->
-<!--                    <outputDirectory>${project.build.directory}/maven-repository</outputDirectory>-->
-<!--                    &lt;!&ndash;-->
-<!--                       指定要上传的分支, refs/heads 这个不变，后面的分支名可选，可以采取一个jar包使用一个分支的策略。-->
-<!--                       若多个jar包同时发布在同一个分支的话，会覆盖。。。。-->
-<!--                    &ndash;&gt;-->
-<!--                    <branch>refs/heads/dependency</branch>-->
-<!--                    &lt;!&ndash; 包含outputDirectory标签内填的文件夹中的所有内容 &ndash;&gt;-->
-<!--                    <includes>-->
-<!--                        <include>**/*</include>-->
-<!--                    </includes>-->
-<!--                    &lt;!&ndash; github远程存储outputDirectory标签内填的文件夹中的内容 &ndash;&gt;-->
-<!--                    <repositoryName>maven_rep</repositoryName>-->
-<!--                    &lt;!&ndash;-->
-<!--                      github的用户名，注意不是登录的用户名，此项需要登录后，进入https://github.com/settings/profile页面配置Name属性，-->
-<!--                      否则会报-->
-<!--                      [ERROR] Failed to execute goal com.github.github:site-maven-plugin:0.12:site-->
-<!--                      (default) on project rfcore: Error creating commit: Invalid request.-->
-<!--                      [ERROR] For 'properties/name', nil is not a string.-->
-<!--                      [ERROR] For 'properties/name', nil is not a string. (422)-->
-<!--                      [ERROR] -> [Help 1]-->
-<!--                      的错误-->
-<!--                    &ndash;&gt;-->
-<!--                    <repositoryOwner>christ</repositoryOwner>-->
-<!--                </configuration>-->
-<!--                <executions>-->
-<!--                    <execution>-->
-<!--                        <goals>-->
-<!--                            <goal>site</goal>-->
-<!--                        </goals>-->
-<!--                        <phase>deploy</phase>-->
-<!--                    </execution>-->
-<!--                </executions>-->
-<!--            </plugin>-->
+            <!--            <plugin>-->
+            <!--                <groupId>com.github.github</groupId>-->
+            <!--                <artifactId>site-maven-plugin</artifactId>-->
+            <!--                <version>0.12</version>-->
+            <!--                <configuration>-->
+            <!--                    <message>Maven artifacts for ${project.artifactId}-${project.version}</message>-->
+            <!--                    <noJekyll>true</noJekyll>-->
+            <!--                    &lt;!&ndash; 指定从哪里去取打好的包，并上传至github &ndash;&gt;-->
+            <!--                    <outputDirectory>${project.build.directory}/maven-repository</outputDirectory>-->
+            <!--                    &lt;!&ndash;-->
+            <!--                       指定要上传的分支, refs/heads 这个不变，后面的分支名可选，可以采取一个jar包使用一个分支的策略。-->
+            <!--                       若多个jar包同时发布在同一个分支的话，会覆盖。。。。-->
+            <!--                    &ndash;&gt;-->
+            <!--                    <branch>refs/heads/dependency</branch>-->
+            <!--                    &lt;!&ndash; 包含outputDirectory标签内填的文件夹中的所有内容 &ndash;&gt;-->
+            <!--                    <includes>-->
+            <!--                        <include>**/*</include>-->
+            <!--                    </includes>-->
+            <!--                    &lt;!&ndash; github远程存储outputDirectory标签内填的文件夹中的内容 &ndash;&gt;-->
+            <!--                    <repositoryName>maven_rep</repositoryName>-->
+            <!--                    &lt;!&ndash;-->
+            <!--                      github的用户名，注意不是登录的用户名，此项需要登录后，进入https://github.com/settings/profile页面配置Name属性，-->
+            <!--                      否则会报-->
+            <!--                      [ERROR] Failed to execute goal com.github.github:site-maven-plugin:0.12:site-->
+            <!--                      (default) on project rfcore: Error creating commit: Invalid request.-->
+            <!--                      [ERROR] For 'properties/name', nil is not a string.-->
+            <!--                      [ERROR] For 'properties/name', nil is not a string. (422)-->
+            <!--                      [ERROR] -> [Help 1]-->
+            <!--                      的错误-->
+            <!--                    &ndash;&gt;-->
+            <!--                    <repositoryOwner>christ</repositoryOwner>-->
+            <!--                </configuration>-->
+            <!--                <executions>-->
+            <!--                    <execution>-->
+            <!--                        <goals>-->
+            <!--                            <goal>site</goal>-->
+            <!--                        </goals>-->
+            <!--                        <phase>deploy</phase>-->
+            <!--                    </execution>-->
+            <!--                </executions>-->
+            <!--            </plugin>-->
         </plugins>
     </build>
     <distributionManagement>
@@ -174,4 +174,12 @@
             <url>file:D:/workspace/maven_rep/releases</url>
         </repository>
     </distributionManagement>
+
+    <!-- 使用时需要的配置 -->
+    <repositories>
+        <repository>
+            <id>github</id>
+            <url>https://raw.github.com/Sxc92/maven_rep/main/releases</url>
+        </repository>
+    </repositories>
 </project>
