@@ -11,6 +11,13 @@
     <modules>
         <module>indigo-core</module>
         <module>indigo-cache</module>
+        <module>indigo-databases</module>
+        <module>indigo-mq</module>
+        <module>indigo-workflow</module>
+        <module>indigo-auth</module>
+        <module>indigo-mongo</module>
+        <module>indigo-webmvc</module>
+        <module>indigo-cloud</module>
     </modules>
 
     <properties>
@@ -19,9 +26,11 @@
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <flatten.maven.plugin.version>1.2.7</flatten.maven.plugin.version>
-        <springboot.version>3.3.5</springboot.version>
+        <springboot.version>3.3.7</springboot.version>
         <springcloud.version>2023.0.4</springcloud.version>
-        <springCloudAlibaba.version>2023.0.1.2</springCloudAlibaba.version>
+        <springCloudAlibaba.version>2023.0.1.0</springCloudAlibaba.version>
+
+        <hutool.version>5.8.32</hutool.version>
     </properties>
 
 
@@ -49,6 +58,12 @@
                 <version>${springCloudAlibaba.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-all</artifactId>
+                <version>${hutool.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
@@ -175,11 +190,11 @@
         </repository>
     </distributionManagement>
 
-    <!-- 使用时需要的配置 -->
-    <repositories>
-        <repository>
-            <id>github</id>
-            <url>https://raw.github.com/Sxc92/maven_rep/main/releases</url>
-        </repository>
-    </repositories>
+<!--    &lt;!&ndash; 使用时需要的配置 &ndash;&gt;-->
+<!--    <repositories>-->
+<!--        <repository>-->
+<!--            <id>github</id>-->
+<!--            <url>https://raw.github.com/Sxc92/maven_rep/main/releases</url>-->
+<!--        </repository>-->
+<!--    </repositories>-->
 </project>
