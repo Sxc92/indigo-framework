@@ -31,6 +31,8 @@
         <springCloudAlibaba.version>2023.0.1.0</springCloudAlibaba.version>
 
         <hutool.version>5.8.32</hutool.version>
+        <thumbnailator.version>0.4.8</thumbnailator.version>
+        <jsch.vision>0.1.54</jsch.vision>
     </properties>
 
 
@@ -65,6 +67,25 @@
                 <artifactId>hutool-all</artifactId>
                 <version>${hutool.version}</version>
             </dependency>
+
+            <dependency>
+                <groupId>net.coobird</groupId>
+                <artifactId>thumbnailator</artifactId>
+                <version>${thumbnailator.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.jcraft</groupId>
+                <artifactId>jsch</artifactId>
+                <version>${jsch.vision}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.indigo.framework</groupId>
+                <artifactId>indigo-core</artifactId>
+                <version>${revision}</version>
+            </dependency>
+
+
         </dependencies>
     </dependencyManagement>
 
