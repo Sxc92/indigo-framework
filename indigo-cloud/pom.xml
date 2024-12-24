@@ -37,10 +37,5 @@
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-seata</artifactId>
         </dependency>
-
-        <!--        <dependency>-->
-        <!--            <groupId></groupId>-->
-        <!--            <artifactId>spring-cloud-sen</artifactId>-->
-        <!--        </dependency>-->
     </dependencies>
 </project>

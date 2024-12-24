@@ -16,7 +16,6 @@ public enum GlobalStatusEnums implements BasicEnums<Integer> {
 
     ERROR(500, "操作失败"),
 
-
     VALIDATE_PARAM(100, "参数校验异常");
 
     private final Integer code;
